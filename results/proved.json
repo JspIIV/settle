@@ -1,0 +1,119 @@
+{
+  "proved_at": "2026-09-21T13:54:20.461Z",
+  "network": "genlayer testnet asimov",
+  "contract": "0x10b5C0B611ffF6721f70ca63C4eC13a2E4D481B7",
+  "true_claim": {
+    "id": "0",
+    "affirmer": "0x80519c53f10d731e4ff83a7d9acd69cf98da6258",
+    "denier": "0x0b57877ec84d96b672cd47d8ea4424283fdb9f6c",
+    "opened_at": "2026-09-21T13:20:53+00:00",
+    "claim": "The GLSA-2026-001 security advisory has been published.",
+    "source_url": "https://raw.githubusercontent.com/JspIIV/settle/master/docs/advisory-published.txt",
+    "resolve_after": 1700000000,
+    "status": "RESOLVED",
+    "outcome": "TRUE",
+    "winner": "0x80519c53f10d731e4ff83a7d9acd69cf98da6258",
+    "loser": "0x0b57877ec84d96b672cd47d8ea4424283fdb9f6c",
+    "reason": "The page explicitly states the advisory has been published.",
+    "quote": "The GLSA-2026-001 security advisory has been published.",
+    "resolved_at": "2026-09-21T13:28:04+00:00"
+  },
+  "false_claim": {
+    "id": "1",
+    "affirmer": "0x80519c53f10d731e4ff83a7d9acd69cf98da6258",
+    "denier": "0x0b57877ec84d96b672cd47d8ea4424283fdb9f6c",
+    "opened_at": "2026-09-21T13:28:54+00:00",
+    "claim": "The Foundation has launched a public token sale.",
+    "source_url": "https://raw.githubusercontent.com/JspIIV/settle/master/docs/no-token-sale.txt",
+    "resolve_after": 1700000000,
+    "status": "RESOLVED",
+    "outcome": "FALSE",
+    "winner": "0x0b57877ec84d96b672cd47d8ea4424283fdb9f6c",
+    "loser": "0x80519c53f10d731e4ff83a7d9acd69cf98da6258",
+    "reason": "The page directly contradicts the claim by stating that no token has been launched and no public token sale is occurring or planned.",
+    "quote": "The Foundation has NOT launched any token and is not running a public token sale of any kind, now or at any planned date.",
+    "resolved_at": "2026-09-21T13:33:04+00:00"
+  },
+  "too_early": {
+    "id": "4",
+    "affirmer": "0x80519c53f10d731e4ff83a7d9acd69cf98da6258",
+    "denier": "0x0b57877ec84d96b672cd47d8ea4424283fdb9f6c",
+    "opened_at": "2026-09-21T13:53:34+00:00",
+    "claim": "A future claim that cannot be settled yet.",
+    "source_url": "https://raw.githubusercontent.com/JspIIV/settle/master/docs/advisory-published.txt",
+    "resolve_after": 1790098802,
+    "status": "JOINED",
+    "outcome": "",
+    "winner": "",
+    "loser": "",
+    "reason": "",
+    "quote": "",
+    "resolved_at": ""
+  },
+  "winner": {
+    "true": {
+      "exists": true,
+      "id": "0",
+      "resolved": true,
+      "outcome": "TRUE",
+      "winner": "0x80519c53f10d731e4ff83a7d9acd69cf98da6258"
+    },
+    "false": {
+      "exists": true,
+      "id": "1",
+      "resolved": true,
+      "outcome": "FALSE",
+      "winner": "0x0b57877ec84d96b672cd47d8ea4424283fdb9f6c"
+    }
+  },
+  "size": {
+    "total": 5,
+    "open": 2,
+    "joined": 1,
+    "resolved": 2
+  },
+  "checks": [
+    {
+      "label": "a true claim resolves TRUE",
+      "ok": true
+    },
+    {
+      "label": "and the affirmer wins it",
+      "ok": true
+    },
+    {
+      "label": "a false claim resolves FALSE",
+      "ok": true
+    },
+    {
+      "label": "and the denier wins it",
+      "ok": true
+    },
+    {
+      "label": "winner() names the right side for a settlement to pay",
+      "ok": true
+    },
+    {
+      "label": "resolving before the time is refused, the claim stays joined",
+      "ok": true
+    },
+    {
+      "label": "at least two claims are resolved on record",
+      "ok": true
+    }
+  ],
+  "transcript": [
+    "true bet #0 winner affirmer; false bet #1 winner denier",
+    "too-early bet #4 joined; trying to resolve before its time...",
+    "too-early bet status after resolve: JOINED",
+    "",
+    "  ok   a true claim resolves TRUE",
+    "  ok   and the affirmer wins it",
+    "  ok   a false claim resolves FALSE",
+    "  ok   and the denier wins it",
+    "  ok   winner() names the right side for a settlement to pay",
+    "  ok   resolving before the time is refused, the claim stays joined",
+    "  ok   at least two claims are resolved on record",
+    "7 checks. The evidence named the winner, and the clock held."
+  ]
+}

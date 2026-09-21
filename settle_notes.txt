@@ -1,0 +1,7 @@
+Two people disagree about a fact that has not happened yet: the exchange will publish proof of reserves by Friday, or it will not. Settling that ordinarily needs a trusted third party, and that party is the whole problem.
+
+Settle replaces the referee with the source. open(claim, source_url, resolve_after) takes the affirming side: a claim in plain words, one public page where its truth will show, and a time before which it cannot be resolved. join(id) takes the denying side. After the time, resolve(id), open to anybody, fetches the page and a GenLayer round reads it: TRUE gives the win to the affirmer, FALSE to the denier, UNCLEAR leaves it open. winner(id) is the address a settlement contract pays.
+
+It resolves only what both sides joined and only after the time, and both parties are bound to their callers.
+
+Proven on Asimov: a claim its source confirms resolves TRUE and the affirmer wins; one its source denies resolves FALSE and the denier wins; resolving early is refused.

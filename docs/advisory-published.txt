@@ -1,0 +1,8 @@
+Foundation Newsroom  Security
+
+Advisory GLSA-2026-001
+Status: PUBLISHED  (2026-09-20)
+
+The GLSA-2026-001 security advisory has been published. The vulnerability is
+disclosed and a fix is available in release v2.3.1. Full technical details and
+remediation steps are included below.
